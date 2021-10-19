@@ -251,9 +251,6 @@ textarea.textarea {
     transform: translateX(0);
   }
 }
-.skills {
-  display: grid;
-}
 .skills .h2 {
   display: block;
   font-size: 1.7rem;
@@ -262,24 +259,39 @@ textarea.textarea {
   margin-bottom: 1rem;
 }
 .skills .skills-container {
+  padding: 2rem;
+  margin: 0 auto;
+  width: 80%;
   display: grid;
-  grid-gap: 3.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  justify-items: end;
+  grid-gap: 4rem;
+  align-items: end;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  box-shadow: 0 0.4rem 0.8rem #e7e7e7;
 }
 @media only screen and (max-width: 1300px) {
   .skills .skills-container {
     grid-gap: 1rem;
   }
 }
+@media only screen and (max-width: 290px) {
+  .skills .skills-container {
+    box-shadow: 0 0.4rem 0.8rem #059a46;
+    background-color: rgba(227, 222, 222, 0.597);
+  }
+}
 .skills .skills-container .icon-skills {
   transition: all 0.5s;
 }
 .skills .skills-container .icon-skills svg {
-  width: 100px;
+  width: 70px;
+}
+@media only screen and (max-width: 290px) {
+  .skills .skills-container .icon-skills svg {
+    width: 100px;
+  }
 }
 .skills .skills-container .icon-skills:hover {
-  transform: scale(1.3, 1.2);
+  transform: rotate(1440deg) scale(1.65, 1.8) translateX(10%) rotate(720deg);
 }
 
 .about {
@@ -395,11 +407,6 @@ textarea.textarea {
   width: 70vw;
   margin: 7rem auto;
 }
-@media (max-width: 960px) {
-  .portfolio {
-    height: 100vh;
-  }
-}
 .portfolio .h2 {
   display: block;
   font-size: 1.7rem;
@@ -408,90 +415,130 @@ textarea.textarea {
 }
 .portfolio .portfolio-container {
   position: relative;
-  padding: 2rem;
-}
-.portfolio .portfolio-container > * {
-  outline: none;
-}
-@media only screen and (max-width: 960px) {
-  .portfolio .portfolio-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 3rem;
-  }
+  padding: 4rem;
 }
 .portfolio .portfolio-container .portfolio_item {
-  padding: 0.1rem;
+  outline: none !important;
+  background-color: brown;
   margin: none;
-  outline-offset: 1rem;
   transition: all 0.3s;
 }
 .portfolio .portfolio-container .portfolio_item img {
   box-shadow: 0 0.4rem 1.8rem #d0cece;
-  width: 400px;
-  outline: 1px solid rgba(0, 128, 0, 0.898);
+  height: 15rem;
+  width: 20rem;
+  transform: all ease-in 1.3s;
 }
-.portfolio .portfolio-container .portfolio_item img:hover {
-  outline: 3px solid rgba(0, 128, 0, 0.898);
+@media only screen and (max-width: 830px) {
+  .portfolio .portfolio-container .portfolio_item img {
+    height: 13rem;
+    width: 17rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .portfolio .portfolio-container .portfolio_item img {
+    height: 10rem;
+    width: 15rem;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .portfolio .portfolio-container .portfolio_item img {
+    height: 7rem;
+    width: 11rem;
+  }
+}
+.portfolio .portfolio-container .portfolio_item:hover, .portfolio .portfolio-container .portfolio_item:hover > img:hover {
+  outline: 5px solid rgba(0, 128, 0, 0.898);
   outline-offset: 0.9rem;
-}
-.portfolio .portfolio-container .portfolio_item:hover {
-  outline: 15px solid rgba(0, 128, 0, 0.898);
   transform: scale(1.1);
   z-index: 20;
+  transition: all ease-in 0.4s;
 }
-.portfolio .portfolio-container .portfolio_item:hover ~ :not(:hover) {
+@media only screen and (max-width: 700px) {
+  .portfolio .portfolio-container .portfolio_item:hover, .portfolio .portfolio-container .portfolio_item:hover > img:hover {
+    outline: 3px solid rgba(0, 128, 0, 0.898);
+    outline-offset: 0.2rem;
+  }
+}
+.portfolio .portfolio-container .portfolio_item:not(:hover) > img:not(.portfolio .portfolio-container .portfolio_item:hover) {
   opacity: 0.5;
   transform: scale(1);
-  z-index: 10;
+  z-index: 0;
 }
-.portfolio .portfolio-container .portfolio_item.first {
-  position: absolute;
-  top: 5rem;
-  left: 5rem;
-  outline: none;
-}
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .portfolio .portfolio-container .portfolio_item.first {
-    left: -5rem;
+    position: absolute;
+    top: 3rem;
+    left: 13rem;
+    outline: none;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .portfolio .portfolio-container .portfolio_item.first {
+    position: absolute;
+    left: -3rem;
   }
 }
 @media only screen and (max-width: 960px) {
   .portfolio .portfolio-container .portfolio_item.first {
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-top: 2rem;
-    text-align: center;
+    position: absolute;
+    left: -3rem;
   }
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 560px) {
   .portfolio .portfolio-container .portfolio_item.first {
-    position: relative;
-  }
-}
-.portfolio .portfolio-container .portfolio_item.second {
-  position: absolute;
-  top: 5rem;
-  left: 35rem;
-  outline: none;
-}
-@media only screen and (max-width: 1200px) {
-  .portfolio .portfolio-container .portfolio_item.second {
+    position: absolute;
+    left: 1rem;
     top: 5rem;
-    left: 25rem;
+  }
+}
+@media only screen and (max-width: 513px) {
+  .portfolio .portfolio-container .portfolio_item.first {
+    left: -3rem;
+    top: 0rem;
+    position: relative;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .portfolio .portfolio-container .portfolio_item.second {
+    position: absolute;
+    top: 5rem;
+    left: 30rem;
+    outline: none;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .portfolio .portfolio-container .portfolio_item.second {
+    position: absolute;
+    top: 4rem;
+    left: 20rem;
   }
 }
 @media only screen and (max-width: 960px) {
   .portfolio .portfolio-container .portfolio_item.second {
-    position: relative;
-    top: 0;
-    left: 0;
-    text-align: center;
+    position: absolute;
+    top: 4rem;
+    left: 20rem;
   }
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 725px) {
   .portfolio .portfolio-container .portfolio_item.second {
+    position: absolute;
+    left: 10rem;
+    top: 6rem;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .portfolio .portfolio-container .portfolio_item.second {
+    position: absolute;
+    left: 10rem;
+    top: 6rem;
+  }
+}
+@media only screen and (max-width: 513px) {
+  .portfolio .portfolio-container .portfolio_item.second {
+    left: -3rem;
+    top: 0rem;
     position: relative;
   }
 }
@@ -509,15 +556,30 @@ textarea.textarea {
 }
 @media only screen and (max-width: 960px) {
   .portfolio .portfolio-container .portfolio_item.third {
-    position: relative;
-    top: 0;
-    left: 0;
-    text-align: center;
+    position: absolute;
+    top: 15rem;
+    left: 8rem;
   }
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 724px) {
   .portfolio .portfolio-container .portfolio_item.third {
-    position: inherit;
+    position: absolute;
+    left: 15rem;
+    top: 12rem;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .portfolio .portfolio-container .portfolio_item.third {
+    position: absolute;
+    left: 5rem;
+    top: 12rem;
+  }
+}
+@media only screen and (max-width: 513px) {
+  .portfolio .portfolio-container .portfolio_item.third {
+    left: -3rem;
+    top: 0rem;
+    position: relative;
   }
 }
 
@@ -526,7 +588,7 @@ textarea.textarea {
 }
 @media (max-width: 960px) {
   .experience {
-    margin-top: 20rem;
+    margin-top: 30rem;
   }
 }
 .experience h2 {
@@ -537,29 +599,37 @@ textarea.textarea {
   padding: 1rem;
   margin-bottom: 5rem;
 }
-.experience .exp_container {
-  width: 100%;
-  height: auto;
-}
 .experience .exp_container .work_exp {
   width: 80%;
   margin: 2rem auto;
   background-color: #f4623a;
-  height: 25vh;
   display: grid;
   grid-template-columns: 3fr 1fr;
   border-radius: 7px;
   box-shadow: 0 0.9rem 1rem 0.4rem #e1e1e1;
 }
+@media only screen and (max-width: 960px) {
+  .experience .exp_container .work_exp {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
 .experience .exp_container .work_exp .job_description {
-  padding: 2rem;
+  height: auto;
+  padding: 1rem;
   background: #fff;
   border-radius: 20px;
+  font-size: 0.8rem;
+}
+@media only screen and (max-width: 960px) {
+  .experience .exp_container .work_exp .job_description {
+    padding: 0.3rem;
+  }
 }
 .experience .exp_container .work_exp .job_description .h3 {
   font-family: "SF Pro";
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-bottom: 0.8rem;
 }
 .experience .exp_container .work_exp .coy_info {
@@ -567,18 +637,32 @@ textarea.textarea {
   padding: 1.5rem 1rem;
   color: honeydew;
 }
+@media only screen and (max-width: 960px) {
+  .experience .exp_container .work_exp .coy_info {
+    padding: 0.5rem;
+  }
+}
+.experience .exp_container .work_exp .coy_info .service_duration {
+  font-size: x-small;
+}
 .experience .exp_container .work_exp .coy_info .coy_name {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   margin: 0.2rem 0;
 }
 .experience .exp_container .work_exp .coy_info .coy_location {
-  margin-top: 1rem;
+  margin-top: 0.1rem;
   font-weight: 300;
   color: white;
+  font-size: 0.7rem;
 }
 
 .education {
   margin: 10rem auto;
+}
+@media only screen and (max-width: 960px) {
+  .education {
+    margin: 4rem auto;
+  }
 }
 .education h2 {
   width: 100%;
@@ -588,19 +672,33 @@ textarea.textarea {
   padding: 1rem;
   margin-bottom: 5rem;
 }
+@media only screen and (max-width: 960px) {
+  .education h2 {
+    margin-bottom: 0rem;
+  }
+}
 .education .edu_container {
   width: 100%;
-  height: auto;
 }
 .education .edu_container .schooling_experience {
   width: 80%;
   margin: 2rem auto;
   background-color: #378c3f;
-  height: 25vh;
   display: grid;
   grid-template-columns: 3fr 1fr;
   border-radius: 7px;
   box-shadow: 0 0.9rem 1rem 0.4rem #e1e1e1;
+}
+@media only screen and (max-width: 960px) {
+  .education .edu_container .schooling_experience {
+    height: auto;
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .education .edu_container .schooling_experience {
+    grid-template-columns: 1fr;
+  }
 }
 .education .edu_container .schooling_experience .schooling_description {
   padding: 2rem;
@@ -636,6 +734,11 @@ textarea.textarea {
   background: #378c3f;
   padding: 1.5rem 1rem;
   color: honeydew;
+}
+@media only screen and (max-width: 960px) {
+  .education .edu_container .schooling_experience .sch_info {
+    border-radius: 20px;
+  }
 }
 .education .edu_container .schooling_experience .sch_info .sch_name {
   font-size: 1.3rem;
