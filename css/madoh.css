@@ -414,7 +414,7 @@ textarea.textarea {
 }
 @media only screen and (max-width: 450px) {
   .portfolio {
-    height: 75vh;
+    height: 60vh;
   }
 }
 @media only screen and (max-width: 350px) {
