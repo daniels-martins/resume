@@ -20,7 +20,7 @@
       </svg>
     </div> <br>
     <nav class="main_nav">
-      <a class="nav__links" href="#skills">Skillso</a>
+      <a class="nav__links" href="#skills">Skills</a>
       <a class="nav__links" href="#about">About</a>
       <a class="nav__links" href="#portfolio">Portfolio</a>
       <a class="nav__links" href="#education">Education</a>
@@ -32,12 +32,11 @@
       <span class="heading_pry--main white uppercase">
         Your Favorite Contractor for Software Development </span>
       <div class="heading_pry--sub">
-        <span class="white "> Daniels Martins can build you better websites using modern web techologies,frameworks
-          and tools! </span>
+        <span class="white "> I can build you better websites and webapps using modern web techologies,frameworks and tools! </span>
         <span class="white"> Just contact me for free consultation, no strings attached!</span>
       </div>
       <div class="cta text-center">
-        <a class="btn btn--white btn--md" href="#">
+        <a class="btn btn--white btn--md" href="#contact">
           Hire me
         </a>
       </div>
@@ -347,16 +346,16 @@
     <div class="contact__container">
       <form class="contact__form" autocomplete="off">
         <legend class="legend">
-          get in touch with us
+          <span class="question"> Like what you see? </span><br> get in touch with me today
         </legend>
         <div class="form__group">
           <input type="text" required autocomplete="off" id="name" class="form__input" placeholder="Full Name" onfocus=showme(this.id) onfocusout=hideme(this.id) />
-          <label for="name" class="label name_label">eg John Doe</label>
+          <label for="name" class="label name_label">eg. John Doe</label>
         </div>
 
         <div class="form__group">
           <input type="email" required aria-autocomplete="off" id="email" class="form__input" placeholder="Email" onfocus=showme(this.id) onfocusout=hideme(this.id) />
-          <label for="email" class="label email_label">example@example.com</label>
+          <label for="email" class="label email_label">eg. example@example.com</label>
         </div>
 
         <div class="form__group">
@@ -366,7 +365,7 @@
 
         <div class="form__group">
           <textarea name="message" placeholder="Message" class="form__input textarea" rows="4" id="message" onfocus=showme(this.id) onfocusout=hideme(this.id)></textarea>
-          <label for="message" class="label message_label">Message for the people</label>
+          <label for="message" class="label message_label">Hmmm... Interesting</label>
         </div>
 
         <div class="cta">
@@ -418,6 +417,7 @@
   };
 
   const hideme = ($id) => {
+    // the '.' in the string is for class selector
     let $label = `.${$id}_label`;
     // console.log('hideme', $label);//for debug
     let label = document.querySelector($label);

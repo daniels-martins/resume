@@ -231,7 +231,17 @@
 // portfolio
 .portfolio {
 	// background-color: rgb(89, 89, 221);
-	height: 65vh;
+	height: 55vh;
+	@media only screen and (max-width:513px) {
+	height: 99vh;
+	}
+		@media only screen and (max-width:450px) {
+	height: 75vh;
+	}
+
+			@media only screen and (max-width:350px) {
+	height: 55vh;
+	}
 	width: 70vw;
 	margin: 7rem auto;
 
@@ -432,8 +442,8 @@
 .experience {
 	margin: 0rem auto;
 
-	@media (max-width: 960px) {
-		margin-top: 30rem;
+	@media (max-width: 513px) {
+		margin-top: 10rem; 
 	}
 
 	h2 {
@@ -667,10 +677,15 @@
 			.legend {
 				margin-bottom: 4rem;
 				// font-family: "SF Pro";
-				text-transform: uppercase;
+				// text-transform: uppercase;
 				font-size: 2rem;
 				font-weight: 400;
 				color: rgba(0, 128, 0, 0.898);
+					font-family: ani, 'alice and the wicked monster', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+						text-transform: capitalize;
+					span.question {
+					
+					}
 				@media only screen and (max-width: 533px) {
 					color: white;
 				}
@@ -740,7 +755,15 @@
 					margin-left: 0.4rem;
 					display: block;
 					transition: all 0.2s;
-					color: #444;
+					color: #333;
+					letter-spacing: .1rem;
+
+					@media only screen and (max-width:533px) {
+					color: greenyellow;
+					letter-spacing: .2rem;
+					// color: red;
+						
+					}
 					transition: all 0.2s;
 				}
 			}
