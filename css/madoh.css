@@ -477,6 +477,14 @@ textarea.textarea {
     width: 11rem;
   }
 }
+.portfolio .portfolio-container .portfolio_item > a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  margin-top: 2rem;
+  background-color: transparent;
+}
 .portfolio .portfolio-container .portfolio_item:hover, .portfolio .portfolio-container .portfolio_item:hover > img:hover {
   outline: 5px solid rgba(0, 128, 0, 0.898);
   outline-offset: 0.9rem;

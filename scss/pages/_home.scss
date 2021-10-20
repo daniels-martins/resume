@@ -272,6 +272,8 @@
 			background-color: brown;
 			margin: none;
 			transition: all 0.3s;
+
+
 			img {
 				box-shadow: 0 0.4rem 1.8rem #d0cece;
 				height: 15rem;
@@ -293,6 +295,14 @@
 				}
 
 				transform: all ease-in 1.3s;
+			}
+			& > a{
+				display:block;
+				text-align: center;
+				text-decoration: none;
+				color: white;
+				margin-top: 2rem;
+				background-color: transparent;
 			}
 			// if a portfolio's items's img is hovered do{}
 			&:hover,
