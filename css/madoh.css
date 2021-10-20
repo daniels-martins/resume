@@ -188,6 +188,11 @@ textarea.textarea {
   position: relative;
   margin-bottom: 6rem;
 }
+@media only screen and (max-width: 350px) {
+  .header {
+    font-size: xx-small;
+  }
+}
 .header .logo-box {
   position: absolute;
   top: 2rem;
@@ -213,6 +218,11 @@ textarea.textarea {
   animation-name: fromleft;
   animation-duration: 1.2s;
 }
+@media only screen and (max-width: 350px) {
+  .header .heading_pry .heading_pry--main {
+    font-size: smaller;
+  }
+}
 .header .heading_pry .heading_pry--sub {
   font-size: 1rem;
   font-weight: 400;
@@ -220,12 +230,22 @@ textarea.textarea {
   animation-name: fromleft;
   animation-duration: 2s;
 }
+@media only screen and (max-width: 350px) {
+  .header .heading_pry .heading_pry--sub {
+    font-size: small;
+  }
+}
 .header .heading_pry .heading_pry--sub span:last-child {
   display: inline-block;
   margin-top: 0.51rem;
 }
 .header .heading_pry .cta {
   margin-top: 2rem;
+}
+@media only screen and (max-width: 350px) {
+  .header .heading_pry .cta .btn--md {
+    padding: 1rem 3rem;
+  }
 }
 .header .main_nav {
   margin-right: 3rem;
@@ -403,7 +423,7 @@ textarea.textarea {
 }
 
 .portfolio {
-  height: 55vh;
+  height: 75vh;
   width: 70vw;
   margin: 7rem auto;
 }
@@ -622,6 +642,9 @@ textarea.textarea {
   grid-template-columns: 3fr 1fr;
   border-radius: 7px;
   box-shadow: 0 0.9rem 1rem 0.4rem #e1e1e1;
+}
+.experience .exp_container .work_exp:nth-child(1) {
+  margin-top: -3rem;
 }
 @media only screen and (max-width: 960px) {
   .experience .exp_container .work_exp {

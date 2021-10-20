@@ -344,34 +344,32 @@
   <section class="contact" id="contact">
     <h2 class="contact__h2">Contact</h2>
     <div class="contact__container">
-      <form class="contact__form" autocomplete="off">
+      <form class="contact__form" autocomplete="off" method="POST" action="mailto:danielsmrtns@gmail.com">
         <legend class="legend">
           <span class="question"> Like what you see? </span><br> get in touch with me today
         </legend>
         <div class="form__group">
-          <input type="text" required autocomplete="off" id="name" class="form__input" placeholder="Full Name" onfocus=showme(this.id) onfocusout=hideme(this.id) />
+          <input type="text" required autocomplete="off" name="fullname" id="name" class="form__input" placeholder="Full Name" onfocus=showme(this.id) onfocusout=hideme(this.id) />
           <label for="name" class="label name_label">eg. John Doe</label>
         </div>
 
         <div class="form__group">
-          <input type="email" required aria-autocomplete="off" id="email" class="form__input" placeholder="Email" onfocus=showme(this.id) onfocusout=hideme(this.id) />
+          <input type="email" required aria-autocomplete="off" name="email" id="email" class="form__input" placeholder="Email" onfocus=showme(this.id) onfocusout=hideme(this.id) />
           <label for="email" class="label email_label">eg. example@example.com</label>
         </div>
 
         <div class="form__group">
-          <input type="text" required autocomplete="off" id="subject" class="form__input" placeholder="Subject" onfocus=showme(this.id) onfocusout=hideme(this.id) />
+          <input type="text" required autocomplete="off" name="subject" id="subject" class="form__input" placeholder="Subject" onfocus=showme(this.id) onfocusout=hideme(this.id) />
           <label for="subject" class="label subject_label">Subject </label>
         </div>
 
         <div class="form__group">
-          <textarea name="message" placeholder="Message" class="form__input textarea" rows="4" id="message" onfocus=showme(this.id) onfocusout=hideme(this.id)></textarea>
+          <textarea name="message" placeholder="Message" name="message_body" class="form__input textarea" rows="4" id="message" onfocus=showme(this.id) onfocusout=hideme(this.id)></textarea>
           <label for="message" class="label message_label">Hmmm... Interesting</label>
         </div>
 
         <div class="cta">
-          <a class="btn btn__sm btn--white btn--md" href="#">
-            Send
-          </a>
+          <input type="submit" class="btn btn__sm btn--white btn--md" href="#"  value="Send"/>
         </div>
       </form>
     </div>
