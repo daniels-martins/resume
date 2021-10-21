@@ -1,3 +1,4 @@
+
 // base
 @use '../scss/base/variables' as var;
 
@@ -12,7 +13,9 @@
 
 @use "../scss/pages/home";
 
-@import "../scss/pages/skills";
+@use "../scss/pages/skills";
+
+@import "../tailwind.css"; 
 
 .stylus {
 	background-color: rgb(244, 98, 58);

@@ -1,3 +1,4 @@
+@import "../tailwind.css";
 * {
   margin: 0;
   padding: 0;
@@ -452,6 +453,7 @@ textarea.textarea {
   background-color: brown;
   margin: none;
   transition: all 0.3s;
+  position: relative;
 }
 .portfolio .portfolio-container .portfolio_item img {
   box-shadow: 0 0.4rem 1.8rem #d0cece;
@@ -479,11 +481,14 @@ textarea.textarea {
 }
 .portfolio .portfolio-container .portfolio_item > a {
   display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
   text-align: center;
-  text-decoration: none;
-  color: white;
   margin-top: 2rem;
-  background-color: transparent;
+  font-size: smaller;
+  padding: 0.3rem 0.2rem;
 }
 .portfolio .portfolio-container .portfolio_item:hover, .portfolio .portfolio-container .portfolio_item:hover > img:hover {
   outline: 5px solid rgba(0, 128, 0, 0.898);
