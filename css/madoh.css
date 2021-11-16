@@ -1,9 +1,9 @@
 /* Error: expected "{".
  *     ,
- * 277 |             position: relative;
+ * 278 |             position: relative;
  *     |                               ^
  *     '
- *   scss/pages/_home.scss 277:22  @use
+ *   scss/pages/_home.scss 278:22  @use
  *   sass/madoh.scss 13:1          root stylesheet */
 
 body::before {
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a     \2577 \a 277 \2502              position: relative;\a     \2502                                ^\a     \2575 \a   scss/pages/_home.scss 277:22  @use\a   sass/madoh.scss 13:1          root stylesheet';
+  content: 'Error: expected "{".\a     \2577 \a 278 \2502              position: relative;\a     \2502                                ^\a     \2575 \a   scss/pages/_home.scss 278:22  @use\a   sass/madoh.scss 13:1          root stylesheet';
 }
