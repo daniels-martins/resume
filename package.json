@@ -1,0 +1,23 @@
+{
+	"name": "task2",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "sass scss/madoh.scss css/madoh.css",
+		"sassy": "sass sass:css scss:css -w"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/daniels-martins/myhngi8_task2backend.git"
+	},
+	"author": "Daniels Martins",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/daniels-martins/myhngi8_task2backend/issues"
+	},
+	"homepage": "https://github.com/daniels-martins/myhngi8_task2backend#readme",
+	"dependencies": {
+		"sass": "^1.43.2"
+	}
+}

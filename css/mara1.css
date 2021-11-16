@@ -1,0 +1,209 @@
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.style-font {
+	font-family: "fira code", "alice and the wicked monster" !important;
+}
+.zoom {
+	transform: scale(1.2);
+	transition: all 1s;
+}
+
+.zoom:hover {
+	transform: scale(1.3);
+}
+
+.stylus {
+	background-color: rgb(244, 98, 58);
+	color: white;
+	border: 1px solid #eee;
+	margin: 0.1rem;
+	word-wrap: break-word;
+	padding: 1.4rem;
+	text-align: justify;
+	border-radius: 10px;
+	box-shadow: 0 0.3rem 0.6rem rgba(255, 0, 0, 0.802) !important;
+	transform: scale(0.6) skewY(10deg);
+
+	/* transform: translateX(3rem); */
+	/* animation: moveInLeft 3s; */
+	/* animation-delay: 3s; */
+	transition: all 0.5s;
+}
+
+.stylus:hover {
+	transform: scale(1.1) skewY(1deg);
+	/* animation: moveInLeft 1s; */
+	transition: all 0.4s;
+}
+.hem {
+	text-decoration-style: dashed;
+	text-decoration-line: underline;
+}
+
+#about1{
+	transition: all 1s;
+}
+#about1:hover{
+	animation: moveInLeft 1.2s;
+}
+
+
+
+/* transformations or animations */
+@keyframes moveInLeft {
+	0% {
+		/* opacity: 0.1; */
+		transform: translateX(-10rem);
+	}
+	100% {
+		opacity: 0.8;
+		transform: translateX(0rem);
+	}
+}
+
+
+/* external */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.bodilon{
+  display: grid;
+  /* height: 20%; */
+  /* place-items: center; */
+	align-items: start;
+	justify-content: center;
+  /* background: rgba(255, 0, 0, 0.802); */
+}
+::selection{
+  color: #fff;
+  background: #6665ee;
+}
+.skill-bars{
+  padding: 25px 30px;
+  width: 50vw;
+  background: #fff;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+.skill-bars .bar{
+  margin: 20px 0;
+}
+.skill-bars .bar:first-child{
+  margin-top: 0px;
+}
+.skill-bars .bar .info{
+  margin-bottom: 5px;
+}
+.skill-bars .bar .info span{
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line{
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+              0 1px rgba(255,255,255,0.8);
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span{
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #6665ee;
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar .progress-line.html span{
+  width: 90%;
+}
+.bar .progress-line.css span{
+  width: 60%;
+}
+.bar .progress-line.jquery span{
+  width: 85%;
+}
+.bar .progress-line.python span{
+  width: 50%;
+}
+.bar .progress-line.mysql span{
+  width: 75%;
+}
+.progress-line span::before{
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100%{
+    opacity: 1;
+  }
+}
+.progress-line.html span::after{
+  content: "90%";
+}
+.progress-line.css span::after{
+  content: "60%";
+}
+.progress-line.jquery span::after{
+  content: "85%";
+}
+.progress-line.python span::after{
+  content: "50%";
+}
+.progress-line.mysql span::after{
+  content: "75%";
+}
+
+/* eol external */
+
+#skills{
+	margin-top: -10rem;
+	margin-bottom: 5rem;
+}
