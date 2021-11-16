@@ -241,6 +241,7 @@
 }
 // portfolio
 .portfolio {
+	width: max-content;
 	// background-color: rgb(89, 89, 221);
 	height: 75vh;
 	@media only screen and (max-width: 513px) {
@@ -273,10 +274,12 @@
 			margin: none;
 			transition: all 0.3s;
 			position: relative;
+			width: fit-content;
 
 
 			img {
 				box-shadow: 0 0.4rem 1.8rem #d0cece;
+
 				height: 15rem;
 				width: 20rem;
 
@@ -291,24 +294,26 @@
 				}
 
 				@media only screen and (max-width: 350px) {
-					height: 7rem;
-					width: 11rem;
+					display: grid;
+					// height: 7rem;
+					width: 37rem;
+					// width: 200%;
 				}
 
 				transform: all ease-in 1.3s;
 			}
-			& > a{
-				display:block;
+			// & > a{
+			// 	display:block;
+			// position: absolute;
+			// 	top: 50%;
+			// 	left: 50%;
+			// 	transform: translate(-50%, -50%);
+			// 	text-align: center;
+			// 	margin-top: 2rem;
+			// 	font-size: smaller;
+			// 	padding: .3rem .2rem;
 
-			position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, 20%);
-				text-align: center;
-				margin-top: 2rem;
-				font-size: smaller;
-				padding: .3rem .2rem;
-			}
+			// }
 			// if a portfolio's items's img is hovered do{}
 			&:hover,
 			&:hover > img:hover {

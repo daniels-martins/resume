@@ -419,6 +419,7 @@ textarea.textarea {
 }
 
 .portfolio {
+  width: max-content;
   height: 75vh;
   width: 70vw;
   margin: 7rem auto;
@@ -454,6 +455,7 @@ textarea.textarea {
   margin: none;
   transition: all 0.3s;
   position: relative;
+  width: fit-content;
 }
 .portfolio .portfolio-container .portfolio_item img {
   box-shadow: 0 0.4rem 1.8rem #d0cece;
@@ -475,20 +477,9 @@ textarea.textarea {
 }
 @media only screen and (max-width: 350px) {
   .portfolio .portfolio-container .portfolio_item img {
-    height: 7rem;
-    width: 11rem;
+    display: grid;
+    width: 37rem;
   }
-}
-.portfolio .portfolio-container .portfolio_item > a {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 20%);
-  text-align: center;
-  margin-top: 2rem;
-  font-size: smaller;
-  padding: 0.3rem 0.2rem;
 }
 .portfolio .portfolio-container .portfolio_item:hover, .portfolio .portfolio-container .portfolio_item:hover > img:hover {
   outline: 5px solid rgba(0, 128, 0, 0.898);
