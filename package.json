@@ -16,8 +16,5 @@
 	"bugs": {
 		"url": "https://github.com/daniels-martins/myhngi8_task2backend/issues"
 	},
-	"homepage": "https://github.com/daniels-martins/myhngi8_task2backend#readme",
-	"dependencies": {
-		"sass": "^1.43.2"
-	}
+	"homepage": "https://github.com/daniels-martins/myhngi8_task2backend#readme"
 }

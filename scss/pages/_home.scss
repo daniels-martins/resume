@@ -273,8 +273,11 @@
 			background-color: brown;
 			margin: none;
 			transition: all 0.3s;
+<<<<<<< HEAD
 			position: relative;
 			width: fit-content;
+=======
+>>>>>>> parent of 83898e3... what a day
 
 
 			img {
@@ -302,6 +305,7 @@
 
 				transform: all ease-in 1.3s;
 			}
+<<<<<<< HEAD
 			// & > a{
 			// 	display:block;
 			// position: absolute;
@@ -314,6 +318,16 @@
 			// 	padding: .3rem .2rem;
 
 			// }
+=======
+			& > a{
+				display:block;
+				text-align: center;
+				text-decoration: none;
+				color: white;
+				margin-top: 2rem;
+				background-color: transparent;
+			}
+>>>>>>> parent of 83898e3... what a day
 			// if a portfolio's items's img is hovered do{}
 			&:hover,
 			&:hover > img:hover {
@@ -437,6 +451,7 @@
 					position: absolute;
 					left: 15rem;
 					top: 12rem;
+
 					// transform: scale(1.5);
 				}
 
