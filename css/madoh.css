@@ -179,6 +179,11 @@ textarea.textarea {
 }
 
 /* eol_utility */
+form {
+  padding-top: 2rem !important;
+  padding-bottom: 4rem !important;
+}
+
 .header {
   height: 95vh;
   background: linear-gradient(to right bottom, rgba(139, 84, 50, 0.645), rgba(135, 105, 88, 0.631)), url(../assets/img/bg-masthead.jpg);
@@ -241,7 +246,7 @@ textarea.textarea {
   margin-top: 0.51rem;
 }
 .header .heading_pry .cta {
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 @media only screen and (max-width: 350px) {
   .header .heading_pry .cta .btn--md {
@@ -419,210 +424,45 @@ textarea.textarea {
 }
 
 .portfolio {
-  height: 75vh;
-  width: 70vw;
-  margin: 7rem auto;
-}
-@media only screen and (max-width: 513px) {
-  .portfolio {
-    height: 99vh;
-  }
-}
-@media only screen and (max-width: 450px) {
-  .portfolio {
-    height: 60vh;
-  }
-}
-@media only screen and (max-width: 350px) {
-  .portfolio {
-    height: 55vh;
-  }
+  width: 100%;
+  margin-top: 7rem;
 }
 .portfolio .h2 {
   display: block;
   font-size: 1.7rem;
   text-align: center;
-  padding: 0.1rem;
 }
 .portfolio .portfolio-container {
-  position: relative;
-  padding: 4rem;
+  width: 100%;
+  padding: 2rem;
+  display: grid;
+  gap: 2em;
+  place-items: center;
+  grid-template-columns: 1, 1fr;
+  grid-template-areas: 1fr;
 }
-.portfolio .portfolio-container .portfolio_item {
-  outline: none !important;
-  background-color: brown;
-  margin: none;
-  transition: all 0.3s;
-  position: relative;
+.portfolio .portfolio-container .portfolio__image {
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 5px 3px #332d2d;
 }
-.portfolio .portfolio-container .portfolio_item img {
-  box-shadow: 0 0.4rem 1.8rem #d0cece;
-  height: 15rem;
-  width: 20rem;
-  transform: all ease-in 1.3s;
-}
-@media only screen and (max-width: 830px) {
-  .portfolio .portfolio-container .portfolio_item img {
-    height: 13rem;
-    width: 17rem;
+@media only screen and (min-width: 583px) {
+  .portfolio .portfolio-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "portfolio__item--first portfolio__item--second portfolio__item--third";
+    gap: 1em;
   }
-}
-@media only screen and (max-width: 450px) {
-  .portfolio .portfolio-container .portfolio_item img {
-    height: 10rem;
-    width: 15rem;
+  .portfolio .portfolio-container .portfolio-container {
+    padding: 5rem;
   }
-}
-@media only screen and (max-width: 350px) {
-  .portfolio .portfolio-container .portfolio_item img {
-    height: 7rem;
-    width: 11rem;
+  .portfolio .portfolio-container .portfolio__item--first {
+    grid-area: portfolio__item--first;
   }
-}
-.portfolio .portfolio-container .portfolio_item > a {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 20%);
-  text-align: center;
-  margin-top: 2rem;
-  font-size: smaller;
-  padding: 0.3rem 0.2rem;
-}
-.portfolio .portfolio-container .portfolio_item:hover, .portfolio .portfolio-container .portfolio_item:hover > img:hover {
-  outline: 5px solid rgba(0, 128, 0, 0.898);
-  outline-offset: 0.9rem;
-  transform: scale(1.1);
-  z-index: 20;
-  transition: all ease-in 0.4s;
-}
-@media only screen and (max-width: 700px) {
-  .portfolio .portfolio-container .portfolio_item:hover, .portfolio .portfolio-container .portfolio_item:hover > img:hover {
-    outline: 3px solid rgba(0, 128, 0, 0.898);
-    outline-offset: 0.2rem;
+  .portfolio .portfolio-container .portfolio__item--second {
+    grid-area: portfolio__item--second;
   }
-}
-.portfolio .portfolio-container .portfolio_item:not(:hover) > img:not(.portfolio .portfolio-container .portfolio_item:hover) {
-  opacity: 0.5;
-  transform: scale(1);
-  z-index: 0;
-}
-@media only screen and (min-width: 1200px) {
-  .portfolio .portfolio-container .portfolio_item.first {
-    position: absolute;
-    top: 3rem;
-    left: 13rem;
-    outline: none;
-  }
-}
-@media only screen and (max-width: 1199px) {
-  .portfolio .portfolio-container .portfolio_item.first {
-    position: absolute;
-    left: -3rem;
-  }
-}
-@media only screen and (max-width: 960px) {
-  .portfolio .portfolio-container .portfolio_item.first {
-    position: absolute;
-    left: -3rem;
-  }
-}
-@media only screen and (max-width: 560px) {
-  .portfolio .portfolio-container .portfolio_item.first {
-    position: absolute;
-    left: 1rem;
-    top: 5rem;
-  }
-}
-@media only screen and (max-width: 513px) {
-  .portfolio .portfolio-container .portfolio_item.first {
-    left: -3rem;
-    top: 0rem;
-    position: relative;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .portfolio .portfolio-container .portfolio_item.second {
-    position: absolute;
-    top: 5rem;
-    left: 30rem;
-    outline: none;
-  }
-}
-@media only screen and (max-width: 1199px) {
-  .portfolio .portfolio-container .portfolio_item.second {
-    position: absolute;
-    top: 4rem;
-    left: 20rem;
-  }
-}
-@media only screen and (max-width: 960px) {
-  .portfolio .portfolio-container .portfolio_item.second {
-    position: absolute;
-    top: 4rem;
-    left: 20rem;
-  }
-}
-@media only screen and (max-width: 725px) {
-  .portfolio .portfolio-container .portfolio_item.second {
-    position: absolute;
-    left: 10rem;
-    top: 6rem;
-  }
-}
-@media only screen and (max-width: 560px) {
-  .portfolio .portfolio-container .portfolio_item.second {
-    position: absolute;
-    left: 10rem;
-    top: 6rem;
-  }
-}
-@media only screen and (max-width: 513px) {
-  .portfolio .portfolio-container .portfolio_item.second {
-    left: -3rem;
-    top: 0rem;
-    position: relative;
-  }
-}
-.portfolio .portfolio-container .portfolio_item.third {
-  position: absolute;
-  top: 15rem;
-  left: 20rem;
-  outline: none;
-}
-@media only screen and (max-width: 1200px) {
-  .portfolio .portfolio-container .portfolio_item.third {
-    top: 15rem;
-    left: 8rem;
-  }
-}
-@media only screen and (max-width: 960px) {
-  .portfolio .portfolio-container .portfolio_item.third {
-    position: absolute;
-    top: 15rem;
-    left: 8rem;
-  }
-}
-@media only screen and (max-width: 724px) {
-  .portfolio .portfolio-container .portfolio_item.third {
-    position: absolute;
-    left: 15rem;
-    top: 12rem;
-  }
-}
-@media only screen and (max-width: 560px) {
-  .portfolio .portfolio-container .portfolio_item.third {
-    position: absolute;
-    left: 5rem;
-    top: 12rem;
-  }
-}
-@media only screen and (max-width: 513px) {
-  .portfolio .portfolio-container .portfolio_item.third {
-    left: -3rem;
-    top: 0rem;
-    position: relative;
+  .portfolio .portfolio-container .portfolio__item--third {
+    grid-area: portfolio__item--third;
   }
 }
 
@@ -801,19 +641,25 @@ textarea.textarea {
   text-align: center;
 }
 
+.contact__h2 {
+  color: rgba(22, 170, 22, 0.898);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 .contact {
-  height: auto;
   margin-bottom: 5rem;
 }
 .contact__h2 {
   text-align: center;
   font-size: 1.7rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0.1rem;
 }
 .contact__container {
-  background: #378c3f;
   width: 100%;
-  padding: 4rem;
+  padding: 1rem;
+  display: grid;
+  place-content: center;
 }
 @media only screen and (max-width: 960px) {
   .contact__container {
@@ -822,10 +668,10 @@ textarea.textarea {
   }
 }
 .contact__container .contact__form {
-  margin: 2rem auto;
-  padding: 3rem;
-  background: linear-gradient(60deg, rgba(255, 255, 255, 0.734) 0%, white 50%, transparent 50%, rgba(255, 0, 0, 0.721) 100%), url(../portf/img6.jpg);
-  width: 80%;
+  margin: 0.2rem auto;
+  padding: 0.1rem;
+  background: linear-gradient(60deg, rgba(255, 255, 255, 0.734) 0%, white 50%, transparent 50%, rgba(63, 62, 75, 0.61) 100%), url(../portf/img6.jpg);
+  min-height: 80%;
   background-size: cover;
   background-position: top;
   box-shadow: 0 1.4rem 0.7rem rgba(0, 128, 0, 0.898);
@@ -846,10 +692,10 @@ textarea.textarea {
   }
 }
 .contact__container .contact__form .legend {
-  margin-bottom: 4rem;
+  margin: 0.1rem;
   font-size: 2rem;
   font-weight: 400;
-  color: rgba(0, 128, 0, 0.898);
+  color: rgba(22, 170, 22, 0.898);
   font-family: ani, "alice and the wicked monster", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-transform: capitalize;
   transition: all 0.4s;
@@ -869,14 +715,15 @@ textarea.textarea {
   }
 }
 .contact__container .contact__form .form__group {
-  font-family: "SF Pro";
+  font-family: "roboto", "ubuntu", "SF Pro";
   margin: 0.5rem 0;
-  width: 35%;
+  width: 55%;
   position: relative;
 }
 @media only screen and (max-width: 533px) {
   .contact__container .contact__form .form__group {
-    width: 85%;
+    min-width: 85%;
+    max-width: 90%;
   }
 }
 .contact__container .contact__form .form__group textarea.textarea {
@@ -911,7 +758,7 @@ textarea.textarea {
   color: orangered;
 }
 .contact__container .contact__form .form__group .form__input:placeholder {
-  color: grey;
+  color: #c70e0e;
   font-weight: 600;
 }
 .contact__container .contact__form .form__group .form__input:placeholder-shown + .label {
@@ -999,7 +846,8 @@ textarea.textarea {
   margin-bottom: 5rem;
 }
 
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
