@@ -290,12 +290,36 @@ form {
     transform: translateX(0);
   }
 }
+.selling {
+  margin-bottom: 5rem;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+}
+@media only screen and (min-width: 30rem) {
+  .selling {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.selling .selling__text {
+  color: #27632d;
+}
+.selling .selling__image {
+  padding: 0.3em;
+  border-radius: 0.5em;
+  box-shadow: 12px 2px 15px 0.4em #c5bebe;
+}
+
+.skills {
+  padding-top: 5rem;
+}
 .skills .h2 {
   display: block;
   font-size: 1.7rem;
   text-align: center;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
 }
 .skills .skills-container {
   padding: 1rem;
