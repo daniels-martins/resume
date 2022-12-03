@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "sass scss/madoh.scss css/madoh.css",
-		"sassy": "sass sass:css scss:css -w"
+		"dev": "sass sass:css scss:css -w"
 	},
 	"repository": {
 		"type": "git",
