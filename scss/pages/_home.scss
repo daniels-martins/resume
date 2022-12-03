@@ -1,8 +1,16 @@
+@use '../base/variables' as var;
+// default setup for forms
+
+*, html, body{
+   scroll-behavior: smooth !important;
+}
 
 form{
    padding-top: 2rem !important;
    padding-bottom: 4rem !important;
 }
+
+
 .header {
    @media only screen and (max-width: 350px) {
       font-size: xx-small;
@@ -296,6 +304,7 @@ form{
    .portfolio-container {
       width: 100%;
       padding: 2rem;
+      position: relative;
 
       display: grid;
       gap: 2em;
@@ -308,7 +317,20 @@ form{
          width: 100%;
          box-shadow: 0 5px 3px #332d2d;
       }
+      .portfolio__item{
+         position: relative;
+         text-align: center;
+         .portfolio__link{
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         // text-decoration-style: none;
+         // display: none;
+      }
 
+      }
+      
       @media only screen and (min-width: 583px) {
          .portfolio-container {
             padding: 5rem;
@@ -579,8 +601,8 @@ form{
                transparent 50%,
                // rgba(255, 0, 0, 0.721) 100%),
                rgba(63, 62, 75, 0.61) 100%),
-            url(../portf/img6.jpg);
-         min-height: 80%;
+               url("../../assets/img/portfolio/thumbnails/4.jpg");
+               min-height: 80%;
          background-size: cover;
          background-position: top;
          // height: 30rem; //for_testing
@@ -592,8 +614,8 @@ form{
                   white 50%,
                   transparent 50%,
                   rgba(255, 0, 0, 0.392) 100%),
-               url(../portf/img6.jpg);
-            background-position: bottom;
+                  url(../../assets/img/portfolio/thumbnails/4.jpg);
+                  background-position: bottom;
             margin: 0rem auto;
             padding: 1rem;
             width: 95%;
@@ -604,7 +626,7 @@ form{
             background: linear-gradient(90deg,
                   transparent 50%,
                   rgba(255, 0, 0, 0.502) 100%),
-               url(../portf/img6.jpg);
+                  url(../../assets/img/portfolio/thumbnails/4.jpg);
          }
 
          .legend {
@@ -678,11 +700,16 @@ form{
                      color: orangered;
                   }
                }
-
+               // pseudo element
+               &::placeholder{
+                  color: rgb(67, 128, 87)!important;
+                  font-weight: 200;
+                  padding: 0 .3rem;
+                  letter-spacing: .1em;
+                  font-family: var.$default_font;
+               } 
+               // pseudo class
                &:placeholder {
-                  color: rgb(199, 14, 14);
-                  font-weight: 600;
-
                   &-shown+.label {
                      opacity: 0;
                      visibility: hidden;
@@ -716,12 +743,14 @@ form{
 
 .footer {
    &__container {
-      .footer__logo {}
+      .footer__logo {
+         text-align: center !important;
+      }
 
       .footer__text {}
 
       .footer__social__links {
-
+         padding: .1em;
          .weblinks,
          .weblinks:visited,
          .weblinks:link {
@@ -730,6 +759,14 @@ form{
             font-weight: 600;
             display: inline-block;
             padding: 0.1rem 1rem;
+         }
+
+         .weblinks{
+            
+            .social_links{
+               min-width: .5em;
+               max-width: 2em;
+            }
          }
       }
 
@@ -749,6 +786,7 @@ form{
       }
    }
 }
+
 
 html body {
    // background: red !important;

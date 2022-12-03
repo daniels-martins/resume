@@ -40,6 +40,9 @@ textarea.textarea {
 .btn.btn__sm, .btn:link.btn__sm, .btn:visited.btn__sm {
   padding: 1rem 4rem;
 }
+.btn.btn__xs, .btn:link.btn__xs, .btn:visited.btn__xs {
+  padding: 1rem 2rem;
+}
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -179,6 +182,10 @@ textarea.textarea {
 }
 
 /* eol_utility */
+*, html, body {
+  scroll-behavior: smooth !important;
+}
+
 form {
   padding-top: 2rem !important;
   padding-bottom: 4rem !important;
@@ -435,6 +442,7 @@ form {
 .portfolio .portfolio-container {
   width: 100%;
   padding: 2rem;
+  position: relative;
   display: grid;
   gap: 2em;
   place-items: center;
@@ -445,6 +453,16 @@ form {
   border-radius: 10px;
   width: 100%;
   box-shadow: 0 5px 3px #332d2d;
+}
+.portfolio .portfolio-container .portfolio__item {
+  position: relative;
+  text-align: center;
+}
+.portfolio .portfolio-container .portfolio__item .portfolio__link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 @media only screen and (min-width: 583px) {
   .portfolio .portfolio-container {
@@ -670,7 +688,7 @@ form {
 .contact__container .contact__form {
   margin: 0.2rem auto;
   padding: 0.1rem;
-  background: linear-gradient(60deg, rgba(255, 255, 255, 0.734) 0%, white 50%, transparent 50%, rgba(63, 62, 75, 0.61) 100%), url(../portf/img6.jpg);
+  background: linear-gradient(60deg, rgba(255, 255, 255, 0.734) 0%, white 50%, transparent 50%, rgba(63, 62, 75, 0.61) 100%), url("../../assets/img/portfolio/thumbnails/4.jpg");
   min-height: 80%;
   background-size: cover;
   background-position: top;
@@ -678,7 +696,7 @@ form {
 }
 @media only screen and (max-width: 960px) {
   .contact__container .contact__form {
-    background: linear-gradient(100deg, rgba(255, 255, 255, 0.734) 0%, white 50%, transparent 50%, rgba(255, 0, 0, 0.392) 100%), url(../portf/img6.jpg);
+    background: linear-gradient(100deg, rgba(255, 255, 255, 0.734) 0%, white 50%, transparent 50%, rgba(255, 0, 0, 0.392) 100%), url(../../assets/img/portfolio/thumbnails/4.jpg);
     background-position: bottom;
     margin: 0rem auto;
     padding: 1rem;
@@ -688,7 +706,7 @@ form {
 }
 @media only screen and (max-width: 533px) {
   .contact__container .contact__form {
-    background: linear-gradient(90deg, transparent 50%, rgba(255, 0, 0, 0.502) 100%), url(../portf/img6.jpg);
+    background: linear-gradient(90deg, transparent 50%, rgba(255, 0, 0, 0.502) 100%), url(../../assets/img/portfolio/thumbnails/4.jpg);
   }
 }
 .contact__container .contact__form .legend {
@@ -757,9 +775,12 @@ form {
   border-bottom: 4px solid orangered;
   color: orangered;
 }
-.contact__container .contact__form .form__group .form__input:placeholder {
-  color: #c70e0e;
-  font-weight: 600;
+.contact__container .contact__form .form__group .form__input::placeholder {
+  color: #438057 !important;
+  font-weight: 200;
+  padding: 0 0.3rem;
+  letter-spacing: 0.1em;
+  font-family: "ani", "alice and the wicked monster", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
 }
 .contact__container .contact__form .form__group .form__input:placeholder-shown + .label {
   opacity: 0;
@@ -784,6 +805,12 @@ form {
   }
 }
 
+.footer__container .footer__logo {
+  text-align: center !important;
+}
+.footer__container .footer__social__links {
+  padding: 0.1em;
+}
 .footer__container .footer__social__links .weblinks,
 .footer__container .footer__social__links .weblinks:visited,
 .footer__container .footer__social__links .weblinks:link {
@@ -792,6 +819,10 @@ form {
   font-weight: 600;
   display: inline-block;
   padding: 0.1rem 1rem;
+}
+.footer__container .footer__social__links .weblinks .social_links {
+  min-width: 0.5em;
+  max-width: 2em;
 }
 .footer__container .copyright {
   padding: 0.41rem;

@@ -7,12 +7,13 @@
    <meta name="description" content="" />
    <meta name="author" content="" />
    <title>Code with Daniels Martins</title>
+
    <link rel="stylesheet" href="css/madoh.css">
    <!-- <link rel="stylesheet" href="css/tailwind.css"> -->
 
 
    <!-- Favicon-->
-   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+   <!-- <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> -->
 </head>
 
 <body>
@@ -214,25 +215,76 @@
       <div class="portfolio-container">
          <div class="portfolio__item portfolio__item--first">
 
-            <img src="assets/img/portfolio/thumbnails/6.jpg" alt="img_1" class="portfolio__image">
+            <img src="assets/img/portfolio/thumbnails/3.jpg" alt="img_1" class="portfolio__image">
+            <div class="portfolio__link">
+               <a href="https://udokah.000webhostapp.com/1/live.com/owa/" target="_blank">
+                  <span class="btn btn--white">
+                     Outlook
+                  </span>
+               </a>
 
-            <a href="https://udokah.000webhostapp.com/1/live.com/owa/"
-               class="underline text-green-900 font-medium">Outlook</a>
+            </div>
 
          </div>
          <div class="portfolio__item portfolio__item--second">
 
             <img src="assets/img/portfolio/thumbnails/1.jpg" alt="img_2" class="portfolio__image">
 
-            <a href="https://udokah.000webhostapp.com/aol" class="underline text-green-900 font-medium">Aol</a>
+            <div class="portfolio__link">
+               <a href="https://udokah.000webhostapp.com/aol" target="_blank">
+                  <span class="btn btn--white">
+                     Aol
+                  </span>
+               </a>
+
+            </div>
 
          </div>
-         
+
          <div class="portfolio__item  portfolio__item--third">
+            <img src="assets/img/portfolio/thumbnails/2.jpg" alt="img_3" class="portfolio__image">
+            <div class="portfolio__link">
+               <a href="https://udokah.000webhostapp.com/gmail" target="_blank">
+                  <span class="btn btn--white ">
+                     Gmail
+                  </span>
+               </a>
+            </div>
+         </div>
+
+         <div class="portfolio__item portfolio__item--fourth">
+            <img src="assets/img/portfolio/thumbnails/6.jpg" alt="img_1" class="portfolio__image">
+            <div class="portfolio__link">
+               <a href="https://udokah.000webhostapp.com/1b" target="_blank">
+                  <span class="btn btn--white ">
+                     Hotmail
+                  </span>
+               </a>
+            </div>
+         </div>
+
+         <div class="portfolio__item portfolio__item--fifth">
+            <img src="assets/img/portfolio/thumbnails/1.jpg" alt="img_2" class="portfolio__image">
+            <div class="portfolio__link">
+               <a href="https://martins-determined.netlify.app" target="_blank">
+                  <span class="btn btn--white ">
+                     Cambrige Hospital
+                  </span>
+               </a>
+            </div>
+         </div>
+
+         <div class="portfolio__item  portfolio__item--sixth">
 
             <img src="assets/img/portfolio/thumbnails/2.jpg" alt="img_3" class="portfolio__image">
 
-            <a href="https://udokah.000webhostapp.com/gmail" class="underline text-green-900 font-medium">Gmail</a>
+            <div class="portfolio__link">
+               <a href="https://github.com/daniels-martins" target="_blank">
+                  <span class="btn btn--white ">
+                     My Github Profile
+                  </span>
+               </a>
+            </div>
          </div>
       </div>
    </section>
@@ -283,6 +335,36 @@
             <div class="coy_info">
                <p class="service_duration"> April 2021</p>
                <p class="coy_name"> QUADREV TECH</p>
+               <p class="coy_location">(Surulere, Lagos State)</p>
+            </div>
+         </div>
+
+         <div class="work_exp">
+            <div class="job_description">
+               <h3 class="h3">Intern: Web Developer </h3>
+               <p>
+                  Participated in the building of enterprise software for personal and corporate projects.
+               </p>
+            </div>
+            <div class="coy_info">
+               <p class="service_duration"> May 2022</p>
+               <p class="coy_name"> IMAGINE TECHNOLOGY LIMITED</p>
+               <p class="coy_location">(Surulere, Lagos State)</p>
+            </div>
+         </div>
+
+
+         <div class="work_exp">
+            <div class="job_description">
+               <h3 class="h3">Software Engineer</h3>
+               <p>
+                  Currently participating in the building of enterprise software for client firms and corporate
+                  establishments.
+               </p>
+            </div>
+            <div class="coy_info">
+               <p class="service_duration"> August 2022 - Present</p>
+               <p class="coy_name"> IMAGINE TECHNOLOGY LIMITED</p>
                <p class="coy_location">(Surulere, Lagos State)</p>
             </div>
          </div>
@@ -359,8 +441,9 @@
                <span class="question"> <b> Like what you see?</b> </span><br> <b>get in touch with me today</b>
             </legend>
             <div class="form__group">
-               <input type="text" required autocomplete="off" name="fullname" id="name" class="form__input"
-                  placeholder="Full Name" onfocus=showme(this.id) onfocusout=hideme(this.id) />
+               <input type="text" required autocomplete="off" name="fullname" id="name"
+                  class="form__input placeholder-black" placeholder="Full Name" onfocus=showme(this.id)
+                  onfocusout=hideme(this.id) />
                <label for="name" class="label name_label">eg. John Doe</label>
             </div>
 
@@ -383,7 +466,12 @@
             </div>
 
             <div class="cta">
-               <input type="submit" class="btn btn__sm btn--white btn--md" href="#" value="Send" />
+               <button type="submit" class="btn btn--white btn__xs" href="#" value="Send"> Send
+                  <!-- <svg class="" style="width: 10;">
+                     <use xlink:href="icomoon1/sprite.svg#icon-gmail">
+                     </use>
+                  </svg> -->
+               </button>
             </div>
          </form>
       </div>
@@ -391,16 +479,64 @@
 
    <section class="footer" id="footer">
       <div class="footer__container text-center">
-         <div class="footer__logo ">
-            <img src="./portf/zuri.png" alt="">
+         <div class="footer__logo">
+            <img src="./assets/img/portfolio/zuri.png" alt="">
          </div>
          <div class="footer__text mb-1">
             <p>Daniels Martins</p>
          </div>
          <div class="footer__social__links">
-            <a class="weblinks" href="https://facebook.com/martins.daniel3" target="_blank">facebook</a>
-            <a class="weblinks" href="https://instagram.com/dan4stiles" target="_blank">Instagram</a>
-            <a class="weblinks" href="https://github.com/daniels-martins/hngi8_task2" target="_blank">Github</a>
+            <a class="weblinks" href="https://facebook.com/martins.daniel3" target="_blank">
+               <svg class="social_links">
+                  <use xlink:href="icomoon1/sprite.svg#icon-facebook">
+                  </use>
+               </svg>
+            </a>
+
+            <a class="weblinks" href="https://twitter.com/dancodez" target="_blank">
+               <svg class="social_links">
+                  <use xlink:href="icomoon1/sprite.svg#icon-twitter">
+                  </use>
+               </svg></a>
+
+
+            <a class="weblinks" href="https://instagram.com/qualitydeveloper" target="_blank">
+               <svg class="social_links">
+                  <use xlink:href="icomoon1/sprite.svg#icon-instagram">
+                  </use>
+               </svg>
+            </a>
+            <a class="weblinks" href="https://www.upwork.com/freelancers/~01826c555a377124d6?viewMode=1"
+               target="_blank">
+               <svg class="social_links">
+                  <use xlink:href="icomoon1/sprite.svg#icon-upwork">
+                  </use>
+               </svg></a>
+            <!-- 
+            <a class="weblinks" href="https://github.com/daniels-martins" target="_blank">
+               <svg class="social_links">
+               <use xlink:href="icomoon1/sprite.svg#icon-fiverr">
+               </use>
+            </svg></a> -->
+
+
+            <a class="weblinks" href="https://www.linkedin.com/in/martins-daniels/" target="_blank">
+               <svg class="social_links">
+                  <use xlink:href="icomoon1/sprite.svg#icon-linkedin">
+                  </use>
+               </svg></a>
+
+            <a class="weblinks" href="mailto:update.daniels@gmail.com?subject = Feedback&body = Message">
+               <svg class="social_links">
+                  <use xlink:href="icomoon1/sprite.svg#icon-gmail">
+                  </use>
+               </svg></a>
+
+            <a class="weblinks" href="https://github.com/daniels-martins" target="_blank">
+               <svg class="social_links">
+                  <use xlink:href="icomoon1/sprite.svg#icon-github">
+                  </use>
+               </svg></a>
          </div>
          <div class="copyright">
             <p> <strong>&copy;</strong> Humbly made by <strong> danielsmrtns &reg;</strong></p>
