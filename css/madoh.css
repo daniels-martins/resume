@@ -471,6 +471,7 @@ form {
 }
 .about .about-container .leftside,
 .about .about-container .rightside {
+  font-family: "SF Pro";
   padding: 3rem;
 }
 @media (max-width: 333px) {
