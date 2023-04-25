@@ -297,46 +297,41 @@ form {
   grid-template-columns: 1fr;
   place-content: center;
 }
-@media only screen and (min-width: 30rem) {
+@media only screen and (min-width: 500px) {
   .selling {
     grid-template-columns: 1fr 1fr;
   }
 }
 .selling .selling__text {
   color: #102c13;
+  line-height: 28em;
+  font-size: 1.31em !important;
 }
 @media only screen and (min-width: 480px) {
   .selling .selling__text {
     padding: 1rem;
-    line-height: 1;
-    font-size: 0.41em;
   }
 }
 @media only screen and (min-width: 500px) {
   .selling .selling__text {
     padding: 1rem;
-    line-height: 1;
-    font-size: 0.51em;
   }
 }
 @media only screen and (min-width: 600px) {
   .selling .selling__text {
     padding: 1rem;
-    line-height: 1;
     font-size: 0.61em;
   }
 }
 @media only screen and (min-width: 700px) {
   .selling .selling__text {
     padding: 1rem;
-    line-height: 1;
     font-size: 0.71em;
   }
 }
 @media only screen and (min-width: 800px) {
   .selling .selling__text {
     padding: 1rem;
-    line-height: 1;
     font-size: 0.81em;
   }
 }

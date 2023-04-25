@@ -139,7 +139,7 @@ form {
    grid-template-columns: 1fr;
    place-content: center;
 
-   @media only screen and (min-width: 30rem) {
+   @media only screen and (min-width: 500px) {
       grid-template-columns: 1fr 1fr;
    }
 
@@ -149,35 +149,32 @@ form {
       // box-shadow: 2px 2px 5px #2e1212;
       // display: none;
       color: #102c13;
-      // font-size: .61em;
+      line-height: 28em;
+
+      font-size: 1.31em !important;
 
       @media only screen and (min-width:480px)  {
          padding: 1rem;
-         line-height: 1;
-         font-size: .41em;
+         // font-size: .41em;
       }
 
       @media only screen and (min-width:500px)  {
          padding: 1rem;
-         line-height: 1;
-         font-size: .51em;
+         // font-size: .51em;
       }
 
       @media only screen and (min-width:600px)  {
          padding: 1rem;
-         line-height: 1;
          font-size: .61em;
       }
 
       @media only screen and (min-width:700px)  {
          padding: 1rem;
-         line-height: 1;
          font-size: .71em;
       }
 
       @media only screen and (min-width:800px)  {
          padding: 1rem;
-         line-height: 1;
          font-size: .81em;
       }
 
